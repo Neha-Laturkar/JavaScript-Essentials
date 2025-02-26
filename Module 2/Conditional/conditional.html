@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDITIONAL STATEMENTS</title>
+    <script src="favourite-car.js"></script>
+</head>
+<body>
+    <h1>CONDITIONAL STATEMENTS CONSOL PRACTISE</h1>
+
+    <div id="content">
+        <h1 id="adulthood" style="display: none;">Welcome To The Adult Section!!</h1>
+        <h1 id="minorhood" style="display: none;">Welcome To The Minor Section!!</h1>
+     </div>
+
+     <script>
+        var age = 30;
+        if ( age >= 18 ){
+            document.getElementById("adulthood").style.display = "block";
+            document.getElementById("adulthood").style.color = "green";
+        }
+        else {
+            document.getElementById("minorhood").style.display = "block";
+            document.getElementById("minorhood").style.color = "Red";
+        }
+     </script>
+</body>
+</html>

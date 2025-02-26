@@ -1,0 +1,19 @@
+div{
+    height: auto;
+    width: auto;
+    background-color: #f78a8a;
+    font-size: larger;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #000;
+    padding: 2em;
+}
+li{
+    padding: 10px;
+}
+li:hover{
+    cursor: pointer;
+    color: black;
+    padding: 2px;
+    text-transform: uppercase;
+}
