@@ -17,8 +17,12 @@ var backAccount = {
         console.log("You are withdrawing £" + amount + " From your account");
         console.log("Your remaining balance is £ :"+ this.balance);
 
+    },
+    accountDetails : function(){
+        console.log(backAccount);
     }
 };
 
 backAccount.deposit(5000);
 backAccount.withdraw(500);
+backAccount.accountDetails();
