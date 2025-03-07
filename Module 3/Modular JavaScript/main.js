@@ -1,0 +1,10 @@
+import { publicFunction } from "./module.js";
+import { showNum } from "./module.js";
+import { add } from "./module.js";
+import { player } from "./module.js";
+import { division } from "./module.js";
+publicFunction();
+showNum();
+add();
+player.greet();
+division();
