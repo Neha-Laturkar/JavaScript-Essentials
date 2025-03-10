@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Toggle Highlight on Click</title>
+    <style>
+        .highlight{
+            border: 5px solid yellow;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        #container{
+            height: 300px;
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ------------------------classList.toggle() – Add/Remove a Class
+    If the class exists, it is removed. If it does not exist, it is added.--------------------------- -->
+
+<div id="container">
+    <h1>Heading content</h1>
+    <p id="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit libero cumque dolorem? Tempore reprehenderit 
+        corporis ratione neque! Voluptates doloribus et labore aliquid debitis, qui ipsam velit veritatis, molestiae corrupti laborum?</p>
+    <button onclick="toggleHighlight()">Toggle Highlight</button>
+</div>
+
+    <script>
+        function toggleHighlight(){
+            document.getElementById("text").classList.toggle("highlight");
+        };
+    </script>
+</body>
+</html>

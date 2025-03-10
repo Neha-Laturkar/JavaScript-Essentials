@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element by ID JavaScript Document</title>
+</head>
+<body>
+
+    <h1 id="text">HELLO WORLD!!</h1>
+    <button onclick="changeText()">Change The Text</button><br><br>
+    <button onclick="changeColor()">Change Color</button><br><br>
+    <button onclick="changeSize()">Change Size</button>
+
+    <script>
+       function changeText(){
+        document.getElementById("text").innerHTML="Hello Changed Text!!!";
+       };
+
+       function changeColor(){
+        document.getElementById("text").style.color="Yellow";
+       };
+
+       function changeSize(){
+        document.getElementById("text").style.fontSize = "130px";
+       };
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List JavaScript Document</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <input type="text" id="listItem" style="padding: 10px; font-size: 20px;"><br><br>
+
+    <button onclick="addItemToList()" style="padding: 10px; font-size: 20px;">Add Entered Task to List</button>
+
+    <ul id="taskList" style="font-size: 20px;"></ul>
+</body>
+
+<script>
+    function addItemToList(){
+
+        var inputField = document.getElementById("listItem");
+        var taskText = inputField.value;
+
+        if( taskText.trim()===""){
+            alert("Please Enter a Task!");
+            return;
+        }
+
+        var ul = document.getElementById("taskList");
+        var li = document.createElement("li");
+
+        li.textContent = taskText;
+
+        ul.appendChild(li);
+
+        inputField.value = "";
+
+
+            // Create Delete Button
+            var deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "❌"; // Cross symbol
+            deleteBtn.style.marginLeft = "15px";
+            deleteBtn.onclick = function() {
+                ul.removeChild(li); // Remove task when button is clicked
+            };
+
+            li.appendChild(deleteBtn); // Attach delete button to the task
+            ul.appendChild(li); // Add task to the list
+
+            inputField.value = ""; // Clear input field
+        
+        
+    };
+</script>
+</html>

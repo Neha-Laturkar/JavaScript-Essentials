@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Class Manipulation in JavaScript</title>
+    <style>
+        .redText{
+            color: red;
+            font-size: 80px;
+            font-weight: 900;
+        }
+        .italicText{
+            font-size: 60px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- In JavaScript, we can add, remove, or toggle CSS classes dynamically using the classList property.
+
+            This is useful when you want to: ✅ Change styles when clicking a button
+            ✅ Highlight an active element
+            ✅ Show or hide elements dynamically-->
+
+<!---------------------------------------- 1️⃣ classList.add() – Add a Class
+                                              Adds a new class to an element.
+
+                                    📌 Example: Change Text Color on Button Click-------------------------------------------- -->
+
+<p id="myText">This Is A Paragraph</p>
+<button onclick="makeRed()">Make It Red & Bigger</button>
+<button onclick="removeChanges()">Remove Changes</button>
+
+<h1 id="heading">This is Heading</h1><br><br>
+<button onclick="italiHeading()">Make it Italic</button>
+<button onclick="removeChanges()">Remove Changes</button>
+
+<script>
+    function makeRed(){
+        document.getElementById("myText").classList.add("redText");
+    }
+    function removeChanges(){
+        document.getElementById("myText").classList.remove("redText");
+        document.getElementById("heading").classList.remove("italicText");
+    }
+    function italiHeading(){
+        document.getElementById("heading").classList.add("italicText");
+    }
+</script>
+
+</body> 
+</html>

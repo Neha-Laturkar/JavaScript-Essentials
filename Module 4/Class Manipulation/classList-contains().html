@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Check If a Button Has a Class</title>
+</head>
+<body>
+                     <!-------- classList.contains() – Check If a Class Exists
+                    Returns true if an element has a specific class, otherwise false. -------->
+    
+    <button id="checkButton" class="active" style="font-size: 40px; padding: 30px; ">Check Class</button>
+
+    <script>
+        var button = document.getElementById("checkButton");
+
+        if(button.classList.contains("active")){
+            console.log("The Button is Active!");
+        }
+        else{
+            console.log("The Button is not Active..");
+        }
+    </script>
+</body>
+</html>

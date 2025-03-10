@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Changes to dark theme Toggle method</title>
+    <style>
+        .bg{
+            background-color: rgb(53, 53, 53);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>ClassList method practice for changing background color using toggle method..</h1>
+    <button onclick="changeTheme()" style="padding: 5px; font-size: 20px;">Click To change the Theme</button>
+
+    <script>
+        function changeTheme(){
+            document.body.classList.toggle("bg");
+        }
+    </script>
+</body>
+</html>
