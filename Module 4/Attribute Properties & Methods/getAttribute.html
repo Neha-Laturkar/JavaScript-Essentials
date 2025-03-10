@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Get Image Source (src)</title>
+</head>
+<body>
+    <h1>Get an Attribute Value
+        This method retrieves the value of a specified attribute from an element.</h1>
+        <button onclick="imgSource()" style="padding: 10px;">Click To see Source</button> <br><br>
+    
+    <img id="myImage" src="images/nikldn-t-6GW8T6Jsc-unsplash.jpg" alt=" a bot top view" height="700px">
+
+    
+
+   <script>
+    function imgSource(){
+        var img = document.getElementById("myImage");
+        alert(img.getAttribute("src"));
+    }
+   </script>
+    
+</body>
+</html>

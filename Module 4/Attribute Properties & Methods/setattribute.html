@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Change an Image on Button Click</title>
+</head>
+<body>
+
+    <button onclick="changeImage()" style="padding: 10px; font-size: 25px;">Change The Image By A Click</button><br><br>
+
+    <img id="myImage" src="images/pexels-pixabay-163236.jpg" height="700px" alt="">
+
+    <script>
+        function changeImage(){
+            var img = document.getElementById("myImage");
+            img.setAttribute("src","images/pietro-de-grandi-6U4wogjLArk-unsplash.jpg");
+            img.setAttribute("width", "900px");
+        };
+    </script>
+    
+</body>
+</html>
