@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Make a Box Bigger</title>
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+
+    <button onclick="recizeBox()" style="padding: 10px;"> Click Here To amke The Box Bigger</button>
+    
+    <button onclick="resetBox()"  style="padding: 10px;">Click To Resest The Box</button>
+    <br><br>
+
+    <div id="box" style="width: 100px; height: 100px; background-color: blueviolet; box-shadow: 2px 2px 5px black; margin: auto;"></div>
+
+    <script>
+        function recizeBox(){
+            var box = document.getElementById("box");
+            box.style.height= "300px";
+            box.style.width = "300px";
+            box.style.backgroundColor = "green";
+            box.style.boxShadow = "2px 2px 10px black";
+        };
+
+        function resetBox(){
+            var reset = document.getElementById("box");
+            reset.style.width = "100px"
+            reset.style.height = "100px"
+            reset.style.backgroundColor = " blueviolet";
+            reset.style.boxShadow = "2px 2px 5px black";
+            };
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📌 Example: Change Text Color on Button Click</title>
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+
+    <h1 id="text" style="text-align: center; font-size: 50px;">Change Text Color!!!</h1><br><br>
+    <button onclick="changeColor()" style="padding: 10px;" >Click Here</button> 
+    <button onclick="resetText()" style="padding: 10px;">Reset Changes</button>
+    <script>
+        function changeColor(){
+            var textColor = document.getElementById("text").style.color = "Blue"
+        };
+        function resetText(){
+            var text = document.getElementById("text").style.color = "";
+        };
+    </script>
+</body>
+</html>

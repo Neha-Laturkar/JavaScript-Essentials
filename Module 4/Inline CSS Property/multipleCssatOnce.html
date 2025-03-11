@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Apply Multiple Styles at Once</title>
+</head>
+<body>
+    <!---------Instead of writing style.property multiple times, you can use cssText to apply multiple styles in one go. -->
+     <h1 id="text" style="text-align: center; font-size: 40px;">Multilpe Styled Text !!</h1><br><br><br>
+    <button onclick="changeStyles()" style="padding: 20px;"> Click Here</button>
+    <script>
+        function changeStyles(){
+            var styles = document.getElementById("text").style.cssText = " color : Orange; background-color: yellow; font-size: 60px; text-align:center";
+        };
+    </script>
+    </body>
+</html>
