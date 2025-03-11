@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example: Using prepend() to Add an Item at the Start</title>
+    <style>
+        .container{ margin: auto; width: 400px; box-shadow: 2px 2px 7px gray; padding: 20px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <ul id="fruits">
+            <li>Strawberry</li>
+            <li>Apples</li>
+        </ul>
+
+        <button onclick="addItem()" style="padding: 10px;">Add Item At The Top</button>
+
+    </div>
+
+    <script>
+        function addItem(){
+            var fruit = document.createElement("li");
+            fruit.textContent = "Banana";
+
+            document.getElementById("fruits").prepend(fruit);
+        };
+    </script>
+</body>
+</html>

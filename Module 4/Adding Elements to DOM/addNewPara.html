@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example: Adding a New Paragraph to a div</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #container{
+            width: 600px;
+            margin: auto;
+            box-shadow: 2px 2px 7px gray;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>EXPLORERS SOFT PLAY</h1>
+    </div>
+
+    <br><br>
+    <button onclick="addParagraph()" style="padding: 10px;" >Add Paragraph</button>
+    <script>
+        function addParagraph(){
+
+            var newPara = document.createElement("p");
+            var newPara1 = document.createElement("p");
+
+            newPara.textContent = "Just a five-minute drive from the city centre with free parking,Explorers ";
+            newPara1.textContent = "Soft Play is the perfect spot for your little ones to play while you enjoy a bite to eat with a friend.";
+            
+            document.getElementById("container").appendChild(newPara);
+            document.getElementById("container").appendChild(newPara1);
+        };
+    </script>
+</body>
+</html>

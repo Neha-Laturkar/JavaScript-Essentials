@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example: Adding a List Item to an Unordered List</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <ul id="listItems">
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+
+    <br>
+    <button onclick="addItems()" >Add Item</button>
+
+    <script>
+        function addItems(){
+            var item = document.createElement("li");
+            item.textContent = "Grapes";
+
+            var item1 = document.createElement("li");
+            item1.textContent = "Orange";
+
+            document.getElementById("listItems").appendChild(item);
+            document.getElementById("listItems").appendChild(item1);
+        }
+    </script>
+</body>
+</html>

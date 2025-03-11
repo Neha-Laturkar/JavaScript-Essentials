@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example: Adding an Input Field Dynamically</title>
+    <style>
+        #container{margin: auto; width: 400px; box-shadow: 2px 2px 7px gray; padding: 20px; display: block;}
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <button onclick="addInputField()" style="padding: 10px;">Add Input Field</button>
+
+    </div>
+
+    <script>
+        function addInputField(){
+            var input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = "Enter Your Name here.."
+
+            document.getElementById("container").appendChild(input);
+        };
+    </script>
+    
+</body>
+</html>

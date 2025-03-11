@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK LIST APPLICATION JAVASCRIPT</title>
+    <style>
+        #container{
+            margin: auto;
+            width: 600px;
+            box-shadow: 2px 2px 7px gray;
+            border-radius: 20px;
+            padding: 20px;
+            display: block;
+            align-items: center;
+            text-align: center;
+        }
+        input{width: 300px; padding: 5px;}
+        button{padding: 10px; font-size: 15px;}
+        #list{ padding: 5px;box-shadow: 2px 2px 7px gray;}
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h1>Create Your Task By Entering In Input Field</h1><br><hr>
+
+        <input type="text" id="items" placeholder="Enter your task.."><br><br>
+
+        <button onclick="addTaskToList()" >Click To Add</button>
+        
+
+        <ul id="list">
+           
+        </ul>
+
+       
+
+    </div>
+
+    <script>
+        function addTaskToList(){
+
+            var inputText = document.getElementById("items");
+
+            var task = inputText.value;
+
+            if ( task.trim()=== "" ){
+                alert("Please Enter A Task!");
+                return ;
+            }
+
+            task.textContent = inputText.value;
+
+            var ul = document.getElementById("list");
+
+            var li = document.createElement("li");
+
+            
+
+            li.textContent = task;
+
+            ul.appendChild(li);
+
+            inputText.value = "";
+
+    }
+    </script>
+</body>
+</html>
