@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+button{
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition:0.3s ease-in-out;
+}
+button:hover{
+    background-color: rgb(105, 105, 105);
+    color: white;
+}
+#container{
+    box-shadow: 2px 2px 7px gray;
+    width: 900px;
+    margin: auto;
+}
