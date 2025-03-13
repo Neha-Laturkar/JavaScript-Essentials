@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY MARKS SUM</title>
+</head>
+<body>
+    <h1>Array Practice</h1>
+
+    <script>
+
+        let marks = [89, 88, 78, 93, 55, 73];
+        console.log("Marks are : "+marks);
+
+        let sum = 0;
+        for (let val of marks){
+            sum += val;
+
+        }
+        console.log("sum of marks is : "+sum);
+        console.log("Average of marks is : " +sum / marks.length);
+
+        //Another example for items offer and creatw new array
+
+        let items = [350, 450, 300, 50, 564, 466];
+
+        console.log("Items price are :" +items);
+
+        for( let i = 0; i<items.length ; i++){
+            let offer = items[i] / 10;
+            items[i] -= offer;
+            console.log("After apllying discount price are :" + items[i]);
+        };
+        console.log(items);
+        
+       
+    </script>
+</body>
+</html>
