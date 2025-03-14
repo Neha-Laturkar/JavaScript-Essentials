@@ -14,3 +14,34 @@ themeToggleBtn.addEventListener("click", ()=> {
     // }
 
 });
+
+//just practice
+
+if(true){
+    const x = 10;
+    console.log(x);
+}
+const x = 20;
+console.log(x);
+
+const person = {
+    name : "Neha",
+    age : 35
+};
+
+person.name = "Rushabh";
+console.log(person);
+person.city = "Norwich";
+console.log(person);
+delete person.name;
+console.log(person);
+person.name = "Neha";
+console.log(person);
+person.grade = 99;
+console.log(person);
+
+let foo = 40;
+foo = "abc";
+console.log(foo);
+foo = true;
+console.log(foo);
