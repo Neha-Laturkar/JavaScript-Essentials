@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Text Content of an Element</title>
+    <style>
+        body{text-align: center; padding: 50px;}
+        button{padding: 20px; margin-top: 40px; cursor: pointer;}
+        p{
+            width: 500px;
+            box-shadow: 3px 3px 7px gray;
+            margin: auto;
+            border-radius: 20px;
+            padding: 20px; font-size: 20px; margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Welcome To My Page!</h1>
+
+    <button id="changeContent">Click To Change The Title!</button>
+    <button id="addPara">Add A Paragrapgh</button>
+
+    <div id="paragraphContainer"></div>
+
+    <script>
+        const text = document.querySelector(".title");
+        const button = document.querySelector("#changeContent");
+
+        button.addEventListener(
+            "click", () =>{
+                text.textContent = 
+                text.textContent === "This Is The Chnaged Text" ? "Welcome To My Page" : "This Is The Chnaged Text";
+            }
+        );
+
+        const addTextInPara = document.querySelector("#addPara");
+
+        const paragraphContainer = document.querySelector("#paragraphContainer");
+
+        addTextInPara.addEventListener(
+            "click", () =>{
+               const newPara = document.createElement("p");
+               newPara.textContent = "The querySelector() method in JavaScript allows you to select elements from the DOM.";
+               paragraphContainer.appendChild(newPara);
+           }
+        );
+    </script>
+
+</body>
+</html>

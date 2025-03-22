@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Selecting a Button and Adding an Event Listener</title>
+    <style>
+        body{text-align: center;}
+        button{padding: 30px; font-size: 20px; box-shadow: 3px 3px 7px gray; border-radius: 20px; margin-top: 40px; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <button id="changeColor">Click To Change The Background Color</button>
+
+    <script>
+
+        const button = document.querySelector("#changeColor");
+
+        button.addEventListener(
+            "click", () => {
+                document.body.style.backgroundColor = 
+                document.body.style.backgroundColor ==="lightblue" ? "white" : "lightblue";
+            }
+        );
+
+    </script>
+</body>
+</html>

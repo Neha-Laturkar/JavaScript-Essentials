@@ -45,3 +45,8 @@ foo = "abc";
 console.log(foo);
 foo = true;
 console.log(foo);
+
+function greet(name){
+    console.log(`Hello ${name} !! You have secured Your Job here!! Welcome`);
+};
+greet("Neha");
