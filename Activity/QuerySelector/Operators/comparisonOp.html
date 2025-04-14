@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators 🔍</title>
+</head>
+<body>
+    <h1>Comparison Operators 🔍</h1>
+    <h1>Logical Operators ⚖️</h1>
+    <script>
+        console.log( 10 > 5);
+        console.log( 10 < 5);
+        console.log( 10 == "10");
+        console.log ( 10 === "10");
+        console.log (10 === 10);
+        console.log( 15 != 10);
+        console.log( 15 !== "10");
+        console.log( 15 !== 10);
+        console.log( 10 >= 5);
+
+
+        // Logical Operators----------------- ⚖️
+        let age = 25;
+        console.log (age > 18 && age < 30);
+        console.log( age > 18 || age < 30);
+        console.log (age > 18 && age == 25);
+        console.log (!age > 18);
+        console.log (!age < 18);
+        console.log (!age == 18);
+        // Bitwise Operators ........................🖥️
+
+        console.log( 5 & 1);
+        console.log( 5 | 1);
+        console.log( 5 ^ 1);
+        console.log( ~5);
+        console.log( 5 << 1);
+        console.log( 5 >> 1);
+        console.log( 5 >>> 1);
+
+        //...............Ternary Operator 🟢🔴
+        let person = 15;
+        let status = (person >= 18) ? "Can Vote" : "Can't Vote";
+        console.log(status);
+
+        //................typeof and instanceof Operators 🔍
+        console.log(typeof 10);
+        console.log (typeof "Hello");
+        console.log (typeof true);
+        console.log (typeof null);
+        console.log (typeof undefined);
+        console.log (typeof {});
+        console.log (typeof []);
+        console.log (typeof function(){});
+        console.log (typeof new Date());
+        console.log (typeof /test/i);
+        console.log (typeof new Number(10));
+        console.log (typeof new String("Hello"));
+        console.log (typeof new Boolean(true));
+        console.log (typeof new Object());
+
+        let arr = [1, 2, 3];
+        console.log(typeof arr);
+        console.log ( arr instanceof Array);
+        console.log ( arr instanceof Object);
+        console.log ( arr instanceof Function); 
+
+    </script>
+</body>
+</html>
