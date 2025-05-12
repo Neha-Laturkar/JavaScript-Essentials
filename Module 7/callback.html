@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Callback Function?</title>
+</head>
+<body>
+    <h1>A callback is a function passed as an argument to another function and is executed later—usually after a task completes.</h1>
+    <h3>🧠 Why Use Callbacks?</h3>
+        <p> are essential for:</p>
+
+        <p>Asynchronous programming (waiting for something to finish, like data loading).</p>
+
+        <p>Handling user actions (clicks, scrolls, etc.).</p>
+
+        <p>Running code in a specific order.</p>
+    <script>
+        //✅ Basic Example:
+        function greetUser (name, callback){
+            console.log ("Hi " + name);
+            callback();
+        }
+        function sayGoodbye(){
+            console.log("Goodbye!");
+        }
+        greetUser("Neha", sayGoodbye);
+
+        //🕓 Real-World Example: setTimeout
+        setTimeout ( function() {
+            console.log("This message is displayed after 2 seconds.");
+        }
+        , 2000
+        );
+
+        setTimeout(
+            function() {
+                console.log("This message is displayed after 3 seconds.");
+            }, 3000
+        );
+    </script>
+</body>
+</html>
