@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Scope & Closure</title>
+</head>
+<body>
+    <h1>Function Scope & Closure</h1>
+    
+</body>
+<script>
+    function sayHello(){
+        let message = "Hello Neha!!";
+        console.log(message);
+    }
+    sayHello();
+// -----------------------------------------------------------------------------------------------------------------
+    function outer(){
+        let count  = 0;
+
+        function inner(){
+            count++;
+            console.log("Count is : "+count);
+        }
+
+        return inner;
+    }
+    const counter = outer();
+    counter();
+    counter();
+//-------------------------------------------------------------------------------------------------------------------
+
+function createCounter(){
+    let count = 0;
+
+    return {
+        increment : function() {
+            count ++;
+            console.log("Count is : " +count);
+        },
+        decrement : function(){
+            count --;
+            console.log("Count is : " +count);
+        }
+    }
+}
+
+const counter1 = createCounter();
+counter1.increment();
+counter1.increment();
+counter1.decrement();
+counter1.increment();
+counter1.decrement();
+
+//------------------writing closure-------------------------------------------------------------------------------------------------
+
+function greetUser(name){
+    return function(){
+        console.log("Hello, " +name + "!!");
+    };    
+}
+const greetNeha = greetUser("Neha");
+greetNeha();
+
+//-------------------🧪 Mini Project: Secret Code Locker 🔐--------------------------------------------------------------
+
+function secretLocker(password){
+    const secretCode = "GAMER2015";
+
+    return function(inputPassword){
+        if (inputPassword === password){
+            return `✅ Access Granted ! Your Secret Code is : ${secretCode}`;
+        }
+        else {
+            return `❌ Access Denied! Incorrect Password.`;
+        }
+    };
+
+}
+
+const locker = secretLocker("Neha123");
+console.log(locker("Neha123")); // ✅ Access Granted ! Your Secret Code is : GAMER2015
+console.log(locker("wrongPassword")); // ❌ Access Denied! Incorrect Password.
+console.log(locker("Neha123")); // ✅ Access Granted ! Your Secret Code is : GAMER2015
+
+
+</script>
+</html>

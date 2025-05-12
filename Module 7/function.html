@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions </h1>
+
+    <script>
+        // Function Declaration
+
+        greet();
+
+        function greet(){ //function statemet
+            console.log("Hello, World!");
+        };
+        function add( a, b){
+            return a + b;
+        };
+
+        const multiplication = function(c , d){ //function expression
+            return c * d;
+        };
+        console.log("Addition is : " +add(2, 3)); // Output: 5
+        console.log("Multiplication is :"+ multiplication(10, 5));
+
+        function substract( a, b){
+            return a - b;
+        };
+        console.log ("Substraction is :" +substract(10, 5)); // Output: 5
+
+        const evenOddCheck = function(num){
+            if (num % 2 === 0){
+                return "Even";
+            } else {
+                return "Odd";   
+            };
+        };
+        console.log("The Number is : " + evenOddCheck(11)); // Output: Even
+
+    </script>
+</body>
+</html>

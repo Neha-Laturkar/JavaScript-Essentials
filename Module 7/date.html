@@ -19,6 +19,25 @@
         const today = new Date();
         const formattedDate = formateDate(today);
         console.log(formattedDate);
+
+        //parent scope and child scope
+        function parentFunction() {
+
+            const parentVariable = "I am from parent scope";
+
+            function childFunction() {
+                console.log(parentVariable); // Accessing parent variable
+            }
+            childFunction();
+        }
+        parentFunction(); // Output: I am from parent scope
+
+        let x = 10; // Global scope
+
+        function addNmmbers(y){
+            return x + y; // Accessing global variable x
+        }
+       console.log("The Addition is : "+addNmmbers(5));
     </script>
     
 </body>
