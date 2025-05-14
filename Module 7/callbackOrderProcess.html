@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Practice Example: Order Processing</title>
+</head>
+<body>
+    <h1>🧪 Practice Example: Order Processing</h1>
+</body>
+<script>
+
+    function processOrder( orderNumber, callback){
+        console.log("Processing order : "+ orderNumber);
+        callback();
+        setTimeout(
+            () => {
+                console.log("Order Completed : " +orderNumber);
+            }, 2000
+        );
+    }
+    function thankYou() {
+        setTimeout(
+            () =>{
+                console.log("Thank You for your order!");
+            }, 4000
+        );
+        
+    }
+
+    processOrder(101, thankYou);
+</script>
+</html>

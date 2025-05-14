@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Calculator</title>
+</head>
+<body>
+    <h1>Callback Calculator</h1>
+</body>
+
+<script>
+    function calculate( a, b, Callback){
+        console.log("Calculating.... " +a + " Plus "+ b);
+        let result= a + b;
+        Callback(result);
+        setTimeout(
+            () => {
+                console.log("Calculation Completed: " + result);
+            },3000
+        );
+    }
+    function displayResult(result){
+        setTimeout(
+            () => {
+                console.log("The result is: " + result);
+            }, 5000
+        );
+    }
+    calculate(5, 10, displayResult);
+
+  
+</script>
+</html>

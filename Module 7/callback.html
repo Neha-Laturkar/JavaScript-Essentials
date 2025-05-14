@@ -38,6 +38,30 @@
                 console.log("This message is displayed after 3 seconds.");
             }, 3000
         );
+
+        setTimeout(
+            function() {
+                console.log("This message is displayed after 5 seconds. ");
+            }, 5000
+        );
+
+        //-----------------------------------------------🧪 Practice Example: Order Processing
+            function processOrder( orderNumber, callback){
+                console.log("Processing Order :" + orderNumber);
+                setTimeout(
+                    () => {
+                        console.log("Order Completed : " + orderNumber);
+                        callback();
+                    }, 2000
+                );
+            }
+            function thankYou() {
+                console.log("Thank You for your order!");
+            }
+
+            processOrder(12345, thankYou);
+                
+
     </script>
 </body>
 </html>
