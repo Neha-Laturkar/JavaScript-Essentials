@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Higher-Order Function?</title>
+</head>
+<body>
+    <h1> A Higher-Order Function (HOF) is:</h1>
+    <h2>A function that takes another function as an argument, returns a function, or both.
+        This allows you to write more flexible, reusable, and cleaner code.</h2>
+        <hr>
+        <h2>Common Built-in Higher-Order Functions in JavaScript</h2>
+           <h2> 1. forEach() – Executes a function for each item in an array</h2>
+           <hr>
+        <h2>2. map() – Transforms each item in the array and returns a new array</h2>
+    
+</body>
+<script>
+    const fruits = ["apple", "banana", "cherry"];
+    fruits.forEach(function(fruit){
+        console.log(fruit.toUpperCase());
+    });
+
+    //2. map() – Transforms each item in the array and returns a new array
+
+    const numbers = [1 , 2, 3, 4, 5];
+
+    const squares = numbers.map(function(number){
+        return number * number;
+    });
+    console.log(squares); // [1, 4, 9, 16, 25]
+
+    //3. filter() – Returns a new array with items that match a condition
+    const ages = [15, 22, 18, 17, 30, 25];
+
+    const adults = ages.filter(function(age){
+
+        return age >= 18;
+    });
+    console.log("Adults are : "+adults);
+
+    //reduce() – Reduces the array to a single value
+
+    const prices = [10, 20, 30];
+
+    const total = prices.reduce(function(accumulator, price){
+        return accumulator + price;
+    }, 0);
+    console.log("Total price is: " + total); // 60
+
+    //5. sort() – Sorts elements based on a custom logic
+
+    const scores = [90, 70, 80, 100, 60];
+
+    scores.sort(function(a, b){
+        return b - a;
+    });
+    console.log("Sorted scores are: " + scores); // [100, 90, 80, 70, 60]
+
+    //✍️ Custom Higher-Order Function Example
+
+    function greetFormatter(name, formatter){
+        return "Hello , " + formatter(name) + "!";
+    }
+
+    function toUpperCase(str){
+        return str.toUpperCase();
+    }
+    console.log(greetFormatter("Rushabh", toUpperCase)); // "Hello, RUSHABH!"
+</script>
+</html>

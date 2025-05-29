@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> What Are Arrow Functions?</title>
+</head>
+<body>
+    <h1>🔹 What Are Arrow Functions?</h1>
+    <h2>Arrow functions are a shorter syntax for writing function expressions. 
+        They were introduced in ES6 (ES2015) and are especially useful for small, 
+        concise functions.</h2>
+</body>
+<script>
+    //Traditional Function:
+    function add (a, b){
+        return a + b;
+    }
+    console.log("Addition is : "+add(5,10));
+
+    //Arrow Function:
+
+    const addArrow = (a, b) => a + b;
+    console.log (addArrow( 10, 30));
+
+    const greet = (name) => { return "Hello , " + name + " !!";};
+    console.log(greet("Neha"));
+
+    //No Parameters:
+
+    const sayHello = () => "Hello World !";
+    console.log (sayHello());
+
+    // One Parameter:
+
+    const square = x => x*x;
+    console.log("square of 5 is : " + square(5));
+
+    //Multiple Parameters:
+    const multiply = (x, y) => x * y;
+    console.log("Multiplication of 5 and 10 is : " + multiply(5, 10));
+
+    //Returning Object:
+    const createPerson = (name, age) => ({ name: name, age: age }); 
+    const person1 = createPerson("Neha", 25);
+    console.log("Person Object: ", person1);
+    //Returning Object with Shorthand Property Names:
+    const createPersonShorthand = (name, age) => ({ name, age });
+    const personShorthand = createPersonShorthand("Neha", 25);
+    console.log("Person Object with Shorthand: ", personShorthand);
+
+    //Multiline Function (with {} and return):
+    const divide1 = (e, f) => {
+        if (f === 0)
+        {
+            return "Cannot divide by zero!";
+            return e / f;
+        };
+        console.log("Division is : " + divide1(10, 2));
+    }
+
+    //No this binding:
+    const person2 = {
+        name : "Neha ",
+        greet : function() {
+           setTimeout(
+            () => {
+                console.log("Hello, " + this.name + "!"); // 'this' refers to person2
+            }, 3000
+           );
+        }
+    }; 
+    person2.greet(); // After 3 seconds, it will log: "Hello, Neha !"
+
+</script>
+</html>
