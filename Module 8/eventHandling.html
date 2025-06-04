@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Using addEventListener() </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: blue;
+            background-color: lightgray;
+            border: 2px solid blue;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        </style>
+</head>
+<body>
+    <h1> Using addEventListener() </h1>
+    <button id="greetBtn">Greet Me !</button>
+
+    <!-- Changing Text on Button Click -->
+    <h1 id="heading">Welcome</h1>
+    <button id="ChangeTextBtn">Change The Text</button>
+
+
+</body>
+<script>
+    const btn = document.getElementById("greetBtn");
+    btn.addEventListener("click", function(){
+        alert("Hello, welcome to the event handling tutorial!");
+    });
+
+    //Changing Text on Button Click
+
+    const heading = document.getElementById("heading");
+    const changeTextBtn = document.getElementById("ChangeTextBtn");
+
+    changeTextBtn.addEventListener("click", function() {
+        heading.textContent = "Changed Text !!!";
+    });
+</script>
+</html>
